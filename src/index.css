@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-blush: #F8E4EA;
+  --paper-ivory: #FFF9F2;
+  --ink-primary: #392B30;
+  --rose-gold: #B77973;
+  --dusty-rose: #C98598;
+  --burgundy: #743F4D;
+}
+
+@layer base {
+  body {
+    background-color: #F8E4EA;
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(243, 204, 215, 0.6) 0px, transparent 60%),
+      radial-gradient(at 85% 85%, rgba(201, 133, 152, 0.3) 0px, transparent 60%),
+      radial-gradient(at 50% 50%, rgba(255, 249, 242, 0.45) 0px, transparent 70%);
+    background-attachment: fixed;
+    color: #392B30;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+}
+
+/* Aged Heirloom Paper Texture */
+.paper-texture {
+  background-color: #FFF9F2;
+  background-image: 
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.8) 0%, rgba(250, 243, 232, 0.95) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+}
+
+/* Gold Foil Text Shimmer */
+.gold-foil-text {
+  background: linear-gradient(135deg, #FFF1CA 0%, #E2C27F 25%, #C5A059 50%, #EAD49E 75%, #9A7730 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Spotlight overlay */
+.bg-radial-spotlight {
+  background: radial-gradient(circle at 50% 40%, rgba(255, 241, 202, 0.3) 0%, rgba(201, 133, 152, 0.15) 45%, transparent 75%);
+}
+
+/* Custom Royal Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(248, 228, 234, 0.4);
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #C98598;
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #8E4D60;
+}
+
